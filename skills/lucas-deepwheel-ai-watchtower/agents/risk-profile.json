@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "risk_level": "medium",
+  "domains": [
+    "developer_tools",
+    "local_observability",
+    "private_networking"
+  ],
+  "sensitive_data": [
+    "work_context",
+    "session_metadata",
+    "machine_configuration"
+  ],
+  "consent_required": true,
+  "human_review_required": true,
+  "source_provenance_required": true,
+  "refusal_rules_required": true
+}

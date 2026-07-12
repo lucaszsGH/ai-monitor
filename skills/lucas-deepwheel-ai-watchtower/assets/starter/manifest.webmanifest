@@ -1,0 +1,11 @@
+{
+  "name": "DeepWheel AI Watchtower",
+  "short_name": "Watchtower",
+  "description": "A privacy-first landscape status screen for AI agents.",
+  "start_url": "./",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#F2F5F9",
+  "theme_color": "#F2F5F9"
+}
+

@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.DS_Store
+watchtower.local.json
+private-profile.*
+private-overlay/
+dist/
+assets/intro/watchtower-phone-landscape-demo.png
+assets/intro/watchtower-phone-landscape-demo-v2.png

@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-01-01T09:30:00+08:00",
+  "global_objective": "验证 Claude 与 Codex 横屏协作状态是否一眼可懂",
+  "screen": {
+    "title": "AI Watchtower",
+    "mode": "demo"
+  },
+  "agents": [
+    {
+      "id": "claude",
+      "label": "Claude",
+      "state": "working",
+      "current_task": "审查信息架构与隐私边界",
+      "context_window": {
+        "used_percent": 62,
+        "source": "mock"
+      },
+      "quota": {
+        "remaining_percent": 74,
+        "resets_at": null,
+        "source": "mock"
+      },
+      "work_context": {
+        "objective": "验证状态字段",
+        "next_action": "返回第二视角审查摘要",
+        "blocker": null,
+        "verified_at": "2026-01-01T09:29:00+08:00"
+      },
+      "attention": {
+        "required": false,
+        "reason": null
+      }
+    },
+    {
+      "id": "codex",
+      "label": "Codex",
+      "state": "waiting",
+      "current_task": "生成横屏样张并运行质量门禁",
+      "context_window": {
+        "used_percent": 41,
+        "source": "mock"
+      },
+      "quota": {
+        "remaining_percent": 88,
+        "resets_at": null,
+        "source": "mock"
+      },
+      "work_context": {
+        "objective": "完成 DeepWheel 横屏样张",
+        "next_action": "等待确认后接入真实状态源",
+        "blocker": "尚未确认真实数据适配器",
+        "verified_at": "2026-01-01T09:29:00+08:00"
+      },
+      "attention": {
+        "required": true,
+        "reason": "需要确认真实数据适配器"
+      }
+    }
+  ]
+}
+
