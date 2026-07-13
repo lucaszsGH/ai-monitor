@@ -1,5 +1,9 @@
 # Review Record
 
+## 2026-07-13 pre-release authorization
+
+Lucas authorized the next public step after the AI Monitor rename and Quality Gate recheck. The authorization covers tag `v0.1.0-rc.3` and a GitHub Pre-release only; it does not authorize local Skill installation or a stable release. The exact pre-release candidate passed package, version, generic Skill, unit, device-matrix, public-surface and live GitHub/Actions reconciliation checks before activation.
+
 ## 2026-07-13 AI Monitor naming correction
 
 Lucas confirmed that **AI Monitor** is the product name and **DeepWheel** is the brand and app-icon identity. The former repository, Skill ID, commands and public asset filenames were corrected before the first tagged release. The new public target is `lucaszsGH/ai-monitor`; Tag and GitHub Release remain separately gated.

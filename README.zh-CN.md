@@ -2,7 +2,7 @@
 
 [English](README.md) | **简体中文**
 
-状态：GitHub 公开发布候选；当前版本 0.1.0-rc.3；尚未打 GitHub Release 标签。
+状态：GitHub 公开预发布；当前版本 0.1.0-rc.3；标签为 `v0.1.0-rc.3`，尚不是稳定版。
 
 **AI Monitor** 是产品名，**DeepWheel** 是品牌与应用图标识别。
 

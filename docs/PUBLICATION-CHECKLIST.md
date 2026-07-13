@@ -24,4 +24,6 @@ These external actions are tracked separately and are not implied by candidate-l
 | Fresh Claude second-view review for the corrected product name | PENDING |
 | Public GitHub repository and visibility | PASSED |
 | Lucas approval for repository rename and push | PASSED |
-| Lucas approval for Tag or GitHub Release | PENDING |
+| Lucas approval for Tag and GitHub Pre-release | PASSED |
+| GitHub Pre-release `v0.1.0-rc.3` | PASSED |
+| Stable Release approval | PENDING |

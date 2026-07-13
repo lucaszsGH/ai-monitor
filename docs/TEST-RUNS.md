@@ -1,5 +1,16 @@
 # Test Runs
 
+## 2026-07-13 · Pre-release activation check
+
+Scope: activate `v0.1.0-rc.3` as a public GitHub Pre-release without installing the Skill or claiming stable-release readiness.
+
+- Quality Gate `0.1.0-rc.8`, public audience with publication package: CLEAN.
+- Package, version and generic Skill validators: PASS.
+- Public unit suite: 9/9 PASS.
+- Chinese/English NOW, SESSIONS and USAGE device matrix at 100% and 200% text scale: PASS.
+- Local `main`, GitHub `main` and GitHub Actions reconciliation before tagging: MATCH.
+- Remaining limitations: older-device real-hardware coverage, fresh Claude naming second view, installation and stable-release approval.
+
 ## 2026-07-13 · AI Monitor naming correction
 
 Scope: standardize the public product, repository and technical identifiers as **AI Monitor**, while retaining **DeepWheel** as the brand and official app-icon identity.

@@ -31,9 +31,10 @@ These are not package defects, but remain outside local proof:
 - Public neutral-starter rotation, Home Screen relaunch and long-running-display checks not explicitly covered by the v4 owner acceptance.
 - Representative older-device real-hardware check; iPhone X coverage is currently simulated.
 - Public repository visibility is live at `lucaszsGH/ai-monitor`.
-- Owner approval for installation, Tag or Release.
+- Installation and stable-release approval remain separate owner decisions.
+- GitHub Pre-release `v0.1.0-rc.3` is authorized and activated.
 - A fresh Claude second-view review for the corrected AI Monitor naming. The earlier review remains historical evidence only.
 
 ## Release decision
 
-The repository is now a **public GitHub release candidate**, not an installed Skill or tagged GitHub Release. Code, onboarding, bilingual public surfaces, the simulated device matrix and the iPhone 17 Pro Max visual acceptance pass locally. Release activation remains blocked by separately authorized installation, Tag or Release actions; unchecked rotation, Home Screen relaunch and long-running-display evidence remain documented limitations rather than silently claimed proof.
+The repository is now a **public GitHub pre-release** at `v0.1.0-rc.3`, not an installed Skill or stable release. Code, onboarding, bilingual public surfaces, the simulated device matrix and the iPhone 17 Pro Max visual acceptance pass locally. Installation and stable-release activation remain separately gated; unchecked rotation, Home Screen relaunch and long-running-display evidence remain documented limitations rather than silently claimed proof.

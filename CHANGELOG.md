@@ -9,6 +9,10 @@
 
 ## [0.1.0-rc.3] - 2026-07-13
 
+### Release status
+
+- Published as GitHub pre-release `v0.1.0-rc.3`; this remains a release candidate rather than a stable release.
+
 ### Added
 
 - Bilingual ten-minute first-run guides and a self-contained generated-folder README.

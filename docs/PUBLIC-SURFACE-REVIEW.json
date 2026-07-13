@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "skill_name": "lucas-deepwheel-ai-monitor",
-  "capability_change": "user_visible",
-  "decision": "UPDATED",
-  "reason": "Lucas corrected the public product name to AI Monitor, retained DeepWheel as the brand and app-icon identity, and authorized the GitHub repository rename before the first tagged release. Public identifiers, commands, assets, onboarding, tests, bilingual surfaces and the release-candidate record were reviewed together.",
+  "capability_change": "internal_only",
+  "decision": "NO_CHANGE_REQUIRED",
+  "reason": "The GitHub Pre-release activation changes distribution state only. Product capability, workflow, privacy boundaries and bilingual visuals are unchanged; English and Chinese release-state text, audit, checklist, review and test records were updated together, and the existing visual assets were re-reviewed without regeneration.",
   "reviewed_skill_sha256": "eed7759cd894f740ad1aa14f968a1b24f68d856820c0d86453f7f6b90111cbda",
   "public_files": [
     "README.md",
@@ -37,13 +37,6 @@
     "assets/intro/ai-monitor-phone-landscape-apple-17promax-final.png",
     "assets/intro/ai-monitor-phone-landscape-apple-iphonex-final.png"
   ],
-  "public_surface_sha256": "c9a7af46519f4c77ba414a4b2559892fc14d9854a80d48b4cd47f93c4873bba9",
-  "updated_assets": [
-    "assets/intro/ai-monitor-hero-en.svg",
-    "assets/intro/ai-monitor-hero-en.png",
-    "assets/intro/ai-monitor-hero-zh-CN.svg",
-    "assets/intro/ai-monitor-hero-zh-CN.png",
-    "assets/intro/ai-monitor-phone-landscape-apple-17promax-final.png",
-    "assets/intro/ai-monitor-phone-landscape-apple-iphonex-final.png"
-  ]
+  "public_surface_sha256": "a1c679c72dd3c72599a3614645ec9ece29f4b90e0db2f8e3ec42c0abc4284979",
+  "updated_assets": []
 }

@@ -2,7 +2,7 @@
 
 **English** | [简体中文](README.zh-CN.md)
 
-Status: public GitHub release candidate. Current version: 0.1.0-rc.3. No tagged GitHub Release yet.
+Status: public GitHub pre-release. Current version: 0.1.0-rc.3. Tagged as `v0.1.0-rc.3`; this is not yet a stable release.
 
 **AI Monitor** is the product name. **DeepWheel** is the brand and the app-icon identity.
 
