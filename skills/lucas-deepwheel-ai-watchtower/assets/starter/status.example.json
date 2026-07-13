@@ -1,62 +1,238 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "updated_at": "2026-01-01T09:30:00+08:00",
-  "global_objective": "验证 Claude 与 Codex 横屏协作状态是否一眼可懂",
   "screen": {
-    "title": "AI Watchtower",
+    "title": "AI Monitor",
     "mode": "demo"
   },
-  "agents": [
+  "providers": [
     {
-      "id": "claude",
-      "label": "Claude",
-      "state": "working",
-      "current_task": "审查信息架构与隐私边界",
-      "context_window": {
-        "used_percent": 62,
-        "source": "mock"
+      "id": "agent-a",
+      "label": "Agent A",
+      "owner": "AI PROVIDER",
+      "monogram": "A",
+      "usage": {
+        "scope": "provider_account",
+        "period_label": "当前周期",
+        "used_percent": 68,
+        "remaining_percent": 32,
+        "reset_label": "14:20 重置",
+        "today_label": "1.8M units",
+        "source": "mock",
+        "verified_label": "模拟数据",
+        "trend": [
+          24,
+          19,
+          23,
+          14,
+          17,
+          11,
+          18
+        ],
+        "period_label_en": "Current period",
+        "reset_label_en": "Resets at 14:20",
+        "verified_label_en": "Demo data"
       },
-      "quota": {
-        "remaining_percent": 74,
-        "resets_at": null,
-        "source": "mock"
-      },
-      "work_context": {
-        "objective": "验证状态字段",
-        "next_action": "返回第二视角审查摘要",
-        "blocker": null,
-        "verified_at": "2026-01-01T09:29:00+08:00"
-      },
-      "attention": {
-        "required": false,
-        "reason": null
-      }
+      "sessions": [
+        {
+          "id": "a-1",
+          "label": "策略审查",
+          "state": "waiting",
+          "current_action": "确认下一节",
+          "attention": {
+            "required": true,
+            "reason": "decision"
+          },
+          "context_health": {
+            "level": "healthy",
+            "used_percent": 46,
+            "handoff_ready": false,
+            "source": "mock"
+          },
+          "updated_at": "2026-01-01T09:29:00+08:00",
+          "updated_label": "2 分钟",
+          "label_en": "Strategy review",
+          "current_action_en": "Confirm the next section",
+          "updated_label_en": "2 min"
+        },
+        {
+          "id": "a-2",
+          "label": "设计校验",
+          "state": "working",
+          "current_action": "复核视觉层级",
+          "attention": {
+            "required": false,
+            "reason": null
+          },
+          "context_health": {
+            "level": "critical",
+            "used_percent": 78,
+            "handoff_ready": false,
+            "source": "mock"
+          },
+          "updated_at": "2026-01-01T09:30:00+08:00",
+          "updated_label": "刚刚",
+          "label_en": "Design audit",
+          "current_action_en": "Review visual hierarchy",
+          "updated_label_en": "Just now"
+        },
+        {
+          "id": "a-3",
+          "label": "研究整理",
+          "state": "working",
+          "current_action": "整理来源笔记",
+          "attention": {
+            "required": false,
+            "reason": null
+          },
+          "context_health": {
+            "level": "healthy",
+            "used_percent": 38,
+            "handoff_ready": false,
+            "source": "mock"
+          },
+          "updated_at": "2026-01-01T09:18:00+08:00",
+          "updated_label": "12 分钟",
+          "label_en": "Research synthesis",
+          "current_action_en": "Organize source notes",
+          "updated_label_en": "12 min"
+        },
+        {
+          "id": "a-4",
+          "label": "内容归档",
+          "state": "idle",
+          "current_action": "等待新输入",
+          "attention": {
+            "required": false,
+            "reason": null
+          },
+          "context_health": {
+            "level": "unknown",
+            "used_percent": null,
+            "handoff_ready": true,
+            "source": "mock"
+          },
+          "updated_at": "2026-01-01T08:30:00+08:00",
+          "updated_label": "1 小时",
+          "label_en": "Content archive",
+          "current_action_en": "Waiting for input",
+          "updated_label_en": "1 hr"
+        }
+      ]
     },
     {
-      "id": "codex",
-      "label": "Codex",
-      "state": "waiting",
-      "current_task": "生成横屏样张并运行质量门禁",
-      "context_window": {
-        "used_percent": 41,
-        "source": "mock"
+      "id": "agent-b",
+      "label": "Agent B",
+      "owner": "AI PROVIDER",
+      "monogram": "B",
+      "usage": {
+        "scope": "provider_account",
+        "period_label": "7 天整体额度",
+        "used_percent": 28,
+        "remaining_percent": 72,
+        "reset_label": "周一重置",
+        "today_label": "168 units",
+        "source": "mock",
+        "verified_label": "模拟数据",
+        "trend": [
+          27,
+          22,
+          24,
+          19,
+          20,
+          15,
+          17
+        ],
+        "period_label_en": "7-day overall limit",
+        "reset_label_en": "Resets Monday",
+        "verified_label_en": "Demo data"
       },
-      "quota": {
-        "remaining_percent": 88,
-        "resets_at": null,
-        "source": "mock"
-      },
-      "work_context": {
-        "objective": "完成 DeepWheel 横屏样张",
-        "next_action": "等待确认后接入真实状态源",
-        "blocker": "尚未确认真实数据适配器",
-        "verified_at": "2026-01-01T09:29:00+08:00"
-      },
-      "attention": {
-        "required": true,
-        "reason": "需要确认真实数据适配器"
-      }
+      "sessions": [
+        {
+          "id": "b-1",
+          "label": "界面系统",
+          "state": "waiting",
+          "current_action": "确认信息优先级",
+          "attention": {
+            "required": true,
+            "reason": "decision"
+          },
+          "context_health": {
+            "level": "healthy",
+            "used_percent": 41,
+            "handoff_ready": false,
+            "source": "mock"
+          },
+          "updated_at": "2026-01-01T09:30:00+08:00",
+          "updated_label": "刚刚",
+          "label_en": "Interface system",
+          "current_action_en": "Confirm information priority",
+          "updated_label_en": "Just now"
+        },
+        {
+          "id": "b-2",
+          "label": "发布门禁",
+          "state": "working",
+          "current_action": "校验公开包",
+          "attention": {
+            "required": false,
+            "reason": null
+          },
+          "context_health": {
+            "level": "healthy",
+            "used_percent": 32,
+            "handoff_ready": false,
+            "source": "mock"
+          },
+          "updated_at": "2026-01-01T09:26:00+08:00",
+          "updated_label": "4 分钟",
+          "label_en": "Release gate",
+          "current_action_en": "Validate the public package",
+          "updated_label_en": "4 min"
+        },
+        {
+          "id": "b-3",
+          "label": "每日简报",
+          "state": "working",
+          "current_action": "整理目标卡",
+          "attention": {
+            "required": false,
+            "reason": null
+          },
+          "context_health": {
+            "level": "critical",
+            "used_percent": 83,
+            "handoff_ready": false,
+            "source": "mock"
+          },
+          "updated_at": "2026-01-01T09:12:00+08:00",
+          "updated_label": "18 分钟",
+          "label_en": "Daily brief",
+          "current_action_en": "Prepare the goal card",
+          "updated_label_en": "18 min"
+        },
+        {
+          "id": "b-4",
+          "label": "品牌手册",
+          "state": "review",
+          "current_action": "等待验收",
+          "attention": {
+            "required": false,
+            "reason": null
+          },
+          "context_health": {
+            "level": "unknown",
+            "used_percent": null,
+            "handoff_ready": true,
+            "source": "mock"
+          },
+          "updated_at": "2026-01-01T08:48:00+08:00",
+          "updated_label": "42 分钟",
+          "label_en": "Brand manual",
+          "current_action_en": "Ready for acceptance",
+          "updated_label_en": "42 min"
+        }
+      ]
     }
   ]
 }
-

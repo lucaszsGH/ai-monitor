@@ -18,6 +18,8 @@
 
 - 背景可延伸到物理屏幕边缘；文字、指标和按钮必须进入安全区。
 - 使用 `viewport-fit=cover` 和 `env(safe-area-inset-*)`，并在 iPhone X 至 17 Pro Max 级尺寸做保守 inset 模拟。
+- Safari 页签模式使用 `100dvh`，主屏 Web App 使用 `100lvh`；两种模式都保留 `safe-area-inset-bottom`，避免底部留白或手势区遮挡。
+- iPhone 横屏持续显示采用纯黑设备底和左右对称护栏，使刘海／灵动岛融入黑色边界；这是视觉弱化，不是隐藏或控制硬件区域。
 
 依据：[Apple HIG Layout](https://developer.apple.com/design/human-interface-guidelines/layout) 与 [WebKit iPhone X safe-area guidance](https://webkit.org/blog/7929/designing-websites-for-iphone-x/)。
 
@@ -51,6 +53,12 @@
 - 主按钮命中区不小于 44×44pt。
 - 首屏只保留一个主行动；状态卡本身默认只读。
 - 数据过期、断网和服务停止必须提供恢复提示，不能只显示静止进度。
+
+### 7. Web App 全屏
+
+- Safari 标签页不能由网页强制隐藏浏览器界面。
+- 通过“添加到主屏幕”并打开“作为 Web App 打开”，从主屏幕图标进入 standalone 模式。
+- 页面必须包含 `apple-mobile-web-app-capable`、横屏 manifest、黑色启动底和 `viewport-fit=cover`；仍需在真机确认状态栏与旋转行为。
 
 ## 不采用
 

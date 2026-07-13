@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Create a privacy-safe AI Watchtower starter without overwriting files."""
+"""Create a privacy-safe DeepWheel AI Monitor starter without overwriting files."""
 
 from __future__ import annotations
 
@@ -10,7 +10,7 @@ from pathlib import Path
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Create a DeepWheel AI Watchtower starter.")
+    parser = argparse.ArgumentParser(description="Create a DeepWheel AI Monitor starter.")
     parser.add_argument("--output", required=True, help="New or empty output directory")
     return parser.parse_args()
 
@@ -38,10 +38,11 @@ def main() -> int:
 
     print(f"CREATED: {output}")
     print("MODE: demo data only; no credentials or local session content were copied")
-    print("NEXT: run validate_watchtower.py, then serve the folder on a trusted network")
+    print("NEXT 1/3: run validate_watchtower.py against the generated folder")
+    print("NEXT 2/3: read the generated README.md and preview on 127.0.0.1")
+    print("NEXT 3/3: confirm trusted Wi-Fi before allowing phone access")
     return 0
 
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

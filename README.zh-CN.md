@@ -1,10 +1,10 @@
-# Lucas-DeepWheel AI Watchtower｜AI 横屏瞭望塔
+# DeepWheel AI Monitor｜AI 编程状态副屏
 
 [English](README.md) | **简体中文**
 
-状态：本地公开发布候选；当前版本 0.1.0-rc.1；尚未公开发布。
+状态：本地公开发布候选；当前版本 0.1.0-rc.2；尚未公开发布。
 
-![DeepWheel AI Watchtower 把横屏手机变成 Claude 与 Codex 的克制状态副屏](assets/intro/watchtower-hero-zh-CN.png)
+![DeepWheel AI Monitor 把横屏手机变成 Claude 与 Codex 的克制状态副屏](assets/intro/watchtower-hero-zh-CN.png)
 
 ## 一句话价值
 
@@ -15,6 +15,9 @@
 这个 Agent Skill 帮助用户：
 
 - 分清额度、Context 窗口健康和真正的工作上下文；
+- 在每个 AI 工具下管理多个会话，绝不把会话 Context 相加；
+- 手动切换 NOW / SESSIONS / USAGE，不自动轮播；
+- 自动跟随系统中英文，也可用右上角 `EN／中` 按钮随时切换；
 - 先用假数据 PWA 验证横屏价值，再接真实状态源；
 - 选择低风险的本机数据路径；
 - 应用 DeepWheel 手机横屏设计合同；
@@ -26,21 +29,23 @@
 
 ## 快速开始
 
-生成到一个全新或空目录：
+首次目标不是接入真实账号，而是在 10 分钟内完成一次可回退的假数据横屏验证。完整图文步骤见 [第一次使用](docs/FIRST-RUN.zh-CN.md)。
+
+### 1. 生成到全新或空目录
 
 ```bash
 python3 skills/lucas-deepwheel-ai-watchtower/scripts/create_watchtower.py \
   --output ./watchtower-demo
 ```
 
-运行校验：
+### 2. 运行校验
 
 ```bash
 python3 skills/lucas-deepwheel-ai-watchtower/scripts/validate_watchtower.py \
   ./watchtower-demo
 ```
 
-仅在当前电脑预览：
+### 3. 先在当前电脑预览
 
 ```bash
 cd watchtower-demo
@@ -49,13 +54,31 @@ python3 -m http.server 8765 --bind 127.0.0.1
 
 然后打开 `http://127.0.0.1:8765`。
 
-starter 只使用合成假数据，不读取 Claude、Codex、浏览器存储、凭证、会话全文或项目文件。
+### 4. 确认后让同一可信 Wi-Fi 中的 iPhone 访问
 
-![使用 Claude 与 Codex 合成状态渲染并按 Apple 平台原则精修的 iPhone 17 Pro Max 横屏样张](assets/intro/watchtower-phone-landscape-apple-17promax-final.png)
+先按 `Control+C` 停止上一个服务。确认当前是家庭或可信办公网络、没有公网端口转发后，运行：
+
+```bash
+python3 -m http.server 8765 --bind 0.0.0.0
+```
+
+手机打开 `http://电脑局域网IP:8765/?debug=1`。不要在手机上使用 `127.0.0.1`。诊断层显示视口、安全区、页面溢出和主屏幕模式，不会发送或保存诊断值。
+
+### 5. iPhone 全屏方式
+
+Safari 网页不能由页面强行隐藏浏览器栏。请在 Safari 点“分享”→“添加到主屏幕”→打开“作为 Web App 打开”，然后从主屏幕的 AI Monitor 图标进入。公开 starter 已包含 standalone、横屏和 Apple Web App 元数据。
+
+黑色底层与左右对称安全区会把刘海／灵动岛并入黑色边界；交互和文字不会进入遮挡区。浏览器使用 `100dvh`，主屏 Web App 使用 `100lvh`，避免 iOS 横屏底部出现大块留白。
+
+starter 只使用中性标记和合成假数据，不读取 Claude、Codex、浏览器存储、凭证、会话全文或项目文件。
+
+主屏幕使用 DeepWheel 品牌 Logo，应用短名为 **AI Monitor**；中文说明为“AI 编程状态副屏”。
+
+![DeepWheel AI Monitor 中文合成数据 iPhone 17 Pro Max 横屏样张](assets/intro/watchtower-phone-landscape-apple-17promax-final.png)
 
 同一套响应式实现也按 iPhone X 物理 3× 级尺寸完成渲染：
 
-![同一响应式实现按 iPhone X 安全区级尺寸渲染的横屏样张](assets/intro/watchtower-phone-landscape-apple-iphonex-final.png)
+![同一响应式实现的 DeepWheel AI Monitor 英文 iPhone X 横屏样张](assets/intro/watchtower-phone-landscape-apple-iphonex-final.png)
 
 ## 能力边界
 
@@ -67,6 +90,7 @@ starter 只使用合成假数据，不读取 Claude、Codex、浏览器存储、
 - 静态隐私和结构校验；
 - 本机与可信局域网部署说明；
 - 通用 Claude/Codex 状态归一化。
+- 多会话 Provider 模型，严格分开账号级用量与单会话 Context。
 
 ### 需要工具、权限或人工复核
 
@@ -88,6 +112,8 @@ starter 只使用合成假数据，不读取 Claude、Codex、浏览器存储、
 公开包不包含真实账号、本机路径、私人项目名、会话正文或可复用凭证，只提供最小状态合同和合成数据。
 
 私人覆盖层必须留在公开仓库之外。见 [docs/PRIVATE-OVERLAY.md](docs/PRIVATE-OVERLAY.md)。
+
+安全接入真实数据见 [docs/LIVE-DATA.md](docs/LIVE-DATA.md) 与 [docs/ADAPTER-CONTRACT.md](docs/ADAPTER-CONTRACT.md)。公开包默认不附带第三方商标或机器专属适配器。
 
 ## 安装
 
@@ -111,6 +137,10 @@ python3 scripts/device-matrix-smoke.py --font-scale 200
 ```
 
 测试和评审记录见 [docs/TEST-RUNS.md](docs/TEST-RUNS.md) 与 [docs/REVIEW-RECORD.md](docs/REVIEW-RECORD.md)。
+
+当前逐项完成度证据见 [docs/RELEASE-CANDIDATE-AUDIT.md](docs/RELEASE-CANDIDATE-AUDIT.md)。
+
+真机验收与发布动作边界见 [docs/OWNER-ACCEPTANCE.md](docs/OWNER-ACCEPTANCE.md)。
 
 ## 安全
 

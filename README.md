@@ -1,10 +1,10 @@
-# Lucas-DeepWheel AI Watchtower
+# DeepWheel AI Monitor
 
 **English** | [简体中文](README.zh-CN.md)
 
-Status: local public-release candidate. Current version: 0.1.0-rc.1. Not yet published.
+Status: local public-release candidate. Current version: 0.1.0-rc.2. Not yet published.
 
-![DeepWheel AI Watchtower turns a landscape phone into a calm status screen for Claude and Codex](assets/intro/watchtower-hero-en.png)
+![DeepWheel AI Monitor turns a landscape phone into a calm status screen for Claude and Codex](assets/intro/watchtower-hero-en.png)
 
 ## One-line value
 
@@ -15,6 +15,9 @@ Turn a landscape phone into a privacy-first status screen for Claude, Codex, and
 This Agent Skill helps a user:
 
 - separate quota, context-window health, and actual work context;
+- group multiple sessions under each provider without summing their context percentages;
+- switch manually between NOW, SESSIONS, and USAGE instead of auto-rotating;
+- follow the system language by default, with a compact `EN／中` control for one-tap switching;
 - start with a demo-data landscape PWA before connecting real sources;
 - choose a low-risk local data path;
 - apply the DeepWheel mobile landscape design contract;
@@ -26,21 +29,23 @@ This Agent Skill helps a user:
 
 ## Quick Start
 
-Generate into a new or empty directory:
+The first goal is not live-provider access. It is a reversible demo-data success in about ten minutes. See the complete walkthrough in [First Run](docs/FIRST-RUN.md).
+
+### 1. Generate into a new or empty directory
 
 ```bash
 python3 skills/lucas-deepwheel-ai-watchtower/scripts/create_watchtower.py \
   --output ./watchtower-demo
 ```
 
-Validate it:
+### 2. Validate it
 
 ```bash
 python3 skills/lucas-deepwheel-ai-watchtower/scripts/validate_watchtower.py \
   ./watchtower-demo
 ```
 
-Preview on the same computer:
+### 3. Preview on the same computer
 
 ```bash
 cd watchtower-demo
@@ -49,13 +54,29 @@ python3 -m http.server 8765 --bind 127.0.0.1
 
 Then open `http://127.0.0.1:8765`.
 
-The starter uses synthetic demo data. It does not read Claude, Codex, browser storage, credentials, transcripts, or project files.
+### 4. Confirm trusted-LAN access for the iPhone
 
-![Apple-aligned iPhone 17 Pro Max landscape render using synthetic Claude and Codex status](assets/intro/watchtower-phone-landscape-apple-17promax-final.png)
+Stop the previous server with `Control+C`. After confirming that this is a trusted home or office Wi-Fi with no public port forwarding, run:
+
+```bash
+python3 -m http.server 8765 --bind 0.0.0.0
+```
+
+Open `http://COMPUTER-LAN-IP:8765/?debug=1` on the phone. Do not use `127.0.0.1` on the phone. The local-only diagnostic overlay reports viewport, safe area, overflow, and Home Screen mode; it does not transmit or store the values.
+
+### 5. Full-screen on iPhone
+
+A webpage cannot force Safari chrome to disappear. In Safari, use Share → Add to Home Screen, enable Open as Web App, then launch AI Monitor from its Home Screen icon. The starter includes standalone, landscape, and Apple web-app metadata. Its black base and symmetric safe-area guards visually merge the notch or Dynamic Island into the edge while keeping content outside the obstruction. Browser mode uses `100dvh`; Home Screen mode uses `100lvh` to avoid the large bottom gap observed on iOS landscape.
+
+The starter uses synthetic demo data and neutral provider monograms. It does not read Claude, Codex, browser storage, credentials, transcripts, or project files.
+
+The Home Screen uses the DeepWheel brand mark and the short app name **AI Monitor**. Its plain-language descriptor is “AI coding status screen.”
+
+![DeepWheel AI Monitor Chinese synthetic-data render at iPhone 17 Pro Max landscape size](assets/intro/watchtower-phone-landscape-apple-17promax-final.png)
 
 The same responsive implementation is also rendered at the iPhone X physical 3× class:
 
-![Apple-aligned iPhone X landscape render using the same responsive implementation](assets/intro/watchtower-phone-landscape-apple-iphonex-final.png)
+![DeepWheel AI Monitor English synthetic-data render using the same responsive implementation at iPhone X size](assets/intro/watchtower-phone-landscape-apple-iphonex-final.png)
 
 ## Capability boundary
 
@@ -67,6 +88,7 @@ The same responsive implementation is also rendered at the iPhone X physical 3×
 - Static privacy and structure validation.
 - Local-only and trusted-LAN deployment guidance.
 - Generic Claude/Codex status normalization.
+- Multi-session provider model with strict provider-level usage and session-level context separation.
 
 ### Requires tools, permissions, or human review
 
@@ -88,6 +110,8 @@ The same responsive implementation is also rendered at the iPhone X physical 3×
 The public package contains no real accounts, local paths, private project names, transcript content, or reusable credentials. It uses a minimal status contract and synthetic fixtures.
 
 Keep personal overlays outside the public repository. See [docs/PRIVATE-OVERLAY.md](docs/PRIVATE-OVERLAY.md).
+
+For safe live-data paths, see [docs/LIVE-DATA.md](docs/LIVE-DATA.md) and [docs/ADAPTER-CONTRACT.md](docs/ADAPTER-CONTRACT.md). The public package never ships provider trademarks or machine-specific adapters by default.
 
 ## Installation
 
@@ -111,6 +135,10 @@ python3 scripts/device-matrix-smoke.py --font-scale 200
 ```
 
 See [docs/TEST-RUNS.md](docs/TEST-RUNS.md) and [docs/REVIEW-RECORD.md](docs/REVIEW-RECORD.md).
+
+The current requirement-by-requirement evidence is recorded in [docs/RELEASE-CANDIDATE-AUDIT.md](docs/RELEASE-CANDIDATE-AUDIT.md).
+
+Real-device and release actions are separated in [docs/OWNER-ACCEPTANCE.md](docs/OWNER-ACCEPTANCE.md).
 
 ## Security
 

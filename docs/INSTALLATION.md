@@ -20,6 +20,8 @@ The exact destination depends on the host application. Do not overwrite an exist
 
 Generate a demo into a new directory and validate it. This confirms the Skill works without reading any real Claude/Codex data.
 
+Follow [First Run](FIRST-RUN.md) or [中文第一次使用](FIRST-RUN.zh-CN.md). The walkthrough separates computer-only preview, explicitly confirmed trusted-LAN access, iPhone Home Screen mode, recovery, and the later live-data decision.
+
 ## Optional tools
 
 Live provider status, HTTPS, private-network access, push notifications, or background launch require separate tools and permissions. Before enabling one, explain:
@@ -36,5 +38,4 @@ Never install optional tools automatically.
 
 ## Uninstall
 
-Remove the copied Skill directory only after confirming it is the intended copy. Generated Watchtower folders are independent and are not deleted automatically.
-
+Remove the copied Skill directory only after confirming it is the intended copy. Generated AI Monitor folders are independent and are not deleted automatically.

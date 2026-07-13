@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for helping improve AI Watchtower.
+Thank you for helping improve DeepWheel AI Monitor.
 
 ## Before opening a pull request
 
