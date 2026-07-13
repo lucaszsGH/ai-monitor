@@ -15,7 +15,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-STARTER = ROOT / "skills" / "lucas-deepwheel-ai-watchtower" / "assets" / "starter"
+STARTER = ROOT / "skills" / "lucas-deepwheel-ai-monitor" / "assets" / "starter"
 SIZES = [
     (812, 375, 44, 21),  # iPhone X / XS / 11 Pro class
     (844, 390, 47, 21),  # iPhone 12 / 13 / 14 class

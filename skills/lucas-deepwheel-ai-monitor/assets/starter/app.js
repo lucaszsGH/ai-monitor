@@ -7,7 +7,7 @@ const page = ["now", "sessions", "usage"].includes(params.get("page")) ? params.
 
 const TEXT = {
   zh: {
-    appLabel: "DeepWheel AI Monitor · AI 编程状态副屏", navLabel: "视图", switchLanguage: "Switch to English",
+    appLabel: "AI Monitor · AI 编程状态副屏", navLabel: "视图", switchLanguage: "Switch to English",
     official: "官方", local: "本机", adapter: "适配器", manual: "手动", mock: "模拟", unavailableSource: "未接入",
     waiting: "等待你", blocked: "有卡点", error: "异常", working: "执行中", review: "待验收", completed: "已完成", idle: "暂停", unavailable: "不可用",
     demoMode: "模拟数据", privateMode: "私人预览", liveMode: "已同步", noDataMode: "数据不可用",
@@ -22,7 +22,7 @@ const TEXT = {
     deviceCheck: "设备检查", close: "关闭", check: "检查", safe: "安全区 T/R/B/L", overflow: "溢出 X/Y", homeMode: "主屏模式", yes: "是", no: "否",
   },
   en: {
-    appLabel: "DeepWheel AI Monitor · AI coding status screen", navLabel: "Views", switchLanguage: "切换到中文",
+    appLabel: "AI Monitor · AI coding status screen", navLabel: "Views", switchLanguage: "切换到中文",
     official: "Official", local: "Local", adapter: "Adapter", manual: "Manual", mock: "Demo", unavailableSource: "Unavailable",
     waiting: "Needs you", blocked: "Blocked", error: "Error", working: "Working", review: "Review", completed: "Complete", idle: "Paused", unavailable: "Unavailable",
     demoMode: "Demo data", privateMode: "Private preview", liveMode: "Synced", noDataMode: "Data unavailable",

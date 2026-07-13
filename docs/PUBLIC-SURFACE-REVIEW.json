@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "skill_name": "lucas-deepwheel-ai-watchtower",
+  "skill_name": "lucas-deepwheel-ai-monitor",
   "capability_change": "user_visible",
   "decision": "UPDATED",
-  "reason": "Lucas accepted the corrected v4 public starter on iPhone 17 Pro Max. The public UI and bilingual hero/device renders use the approved private visual baseline, and the repository is now public on GitHub as an unreleased candidate.",
-  "reviewed_skill_sha256": "bdca7edfbaee060c12c82edd25552506404ca867e57227ddc4b114dc2cf7d7b7",
+  "reason": "Lucas corrected the public product name to AI Monitor, retained DeepWheel as the brand and app-icon identity, and authorized the GitHub repository rename before the first tagged release. Public identifiers, commands, assets, onboarding, tests, bilingual surfaces and the release-candidate record were reviewed together.",
+  "reviewed_skill_sha256": "eed7759cd894f740ad1aa14f968a1b24f68d856820c0d86453f7f6b90111cbda",
   "public_files": [
     "README.md",
     "README.zh-CN.md",
@@ -26,24 +26,24 @@
     "docs/ROADMAP.md",
     "examples/example-prompts.md",
     "assets/intro/README.md",
-    "assets/intro/watchtower-hero-en.svg",
-    "assets/intro/watchtower-hero-en.png",
-    "assets/intro/watchtower-hero-zh-CN.svg",
-    "assets/intro/watchtower-hero-zh-CN.png",
-    "assets/intro/watchtower-workflow-en.svg",
-    "assets/intro/watchtower-workflow-en.png",
-    "assets/intro/watchtower-workflow-zh-CN.svg",
-    "assets/intro/watchtower-workflow-zh-CN.png",
-    "assets/intro/watchtower-phone-landscape-apple-17promax-final.png",
-    "assets/intro/watchtower-phone-landscape-apple-iphonex-final.png"
+    "assets/intro/ai-monitor-hero-en.svg",
+    "assets/intro/ai-monitor-hero-en.png",
+    "assets/intro/ai-monitor-hero-zh-CN.svg",
+    "assets/intro/ai-monitor-hero-zh-CN.png",
+    "assets/intro/ai-monitor-workflow-en.svg",
+    "assets/intro/ai-monitor-workflow-en.png",
+    "assets/intro/ai-monitor-workflow-zh-CN.svg",
+    "assets/intro/ai-monitor-workflow-zh-CN.png",
+    "assets/intro/ai-monitor-phone-landscape-apple-17promax-final.png",
+    "assets/intro/ai-monitor-phone-landscape-apple-iphonex-final.png"
   ],
-  "public_surface_sha256": "6d08d67660432b3e8b38447f2bc85ba5bd408bcf6e9d0bb84ca9229e4941ba19",
+  "public_surface_sha256": "c9a7af46519f4c77ba414a4b2559892fc14d9854a80d48b4cd47f93c4873bba9",
   "updated_assets": [
-    "assets/intro/watchtower-hero-en.svg",
-    "assets/intro/watchtower-hero-en.png",
-    "assets/intro/watchtower-hero-zh-CN.svg",
-    "assets/intro/watchtower-hero-zh-CN.png",
-    "assets/intro/watchtower-phone-landscape-apple-17promax-final.png",
-    "assets/intro/watchtower-phone-landscape-apple-iphonex-final.png"
+    "assets/intro/ai-monitor-hero-en.svg",
+    "assets/intro/ai-monitor-hero-en.png",
+    "assets/intro/ai-monitor-hero-zh-CN.svg",
+    "assets/intro/ai-monitor-hero-zh-CN.png",
+    "assets/intro/ai-monitor-phone-landscape-apple-17promax-final.png",
+    "assets/intro/ai-monitor-phone-landscape-apple-iphonex-final.png"
   ]
 }

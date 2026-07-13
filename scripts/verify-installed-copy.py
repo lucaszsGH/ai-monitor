@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "skills" / "lucas-deepwheel-ai-watchtower"
+SOURCE = ROOT / "skills" / "lucas-deepwheel-ai-monitor"
 
 
 def digest_tree(root: Path) -> str:

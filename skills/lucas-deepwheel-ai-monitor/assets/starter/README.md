@@ -1,4 +1,4 @@
-# DeepWheel AI Monitor starter｜首次使用
+# AI Monitor starter｜首次使用
 
 This folder contains synthetic demo data only. It does not read Claude, Codex, credentials, transcripts, browser storage, or project files.
 

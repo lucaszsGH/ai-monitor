@@ -1,9 +1,9 @@
 __pycache__/
 *.pyc
 .DS_Store
-watchtower.local.json
+ai-monitor.local.json
 private-profile.*
 private-overlay/
 dist/
-assets/intro/watchtower-phone-landscape-demo.png
-assets/intro/watchtower-phone-landscape-demo-v2.png
+assets/intro/ai-monitor-phone-landscape-demo.png
+assets/intro/ai-monitor-phone-landscape-demo-v2.png

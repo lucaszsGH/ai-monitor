@@ -1,6 +1,6 @@
 # Live data without credential scraping
 
-DeepWheel AI Monitor deliberately separates three kinds of data:
+AI Monitor deliberately separates three kinds of data:
 
 1. **Session summaries** — sanitized titles, action, state, attention, and update time.
 2. **Session context health** — a value for one session only, when a supported source exposes it.

@@ -1,10 +1,12 @@
-# DeepWheel AI Monitor
+# AI Monitor
 
 **English** | [简体中文](README.zh-CN.md)
 
-Status: public GitHub release candidate. Current version: 0.1.0-rc.2. No tagged GitHub Release yet.
+Status: public GitHub release candidate. Current version: 0.1.0-rc.3. No tagged GitHub Release yet.
 
-![DeepWheel AI Monitor turns a landscape phone into a calm status screen for Claude and Codex](assets/intro/watchtower-hero-en.png)
+**AI Monitor** is the product name. **DeepWheel** is the brand and the app-icon identity.
+
+![AI Monitor turns a landscape phone into a calm status screen for Claude and Codex](assets/intro/ai-monitor-hero-en.png)
 
 ## One-line value
 
@@ -25,7 +27,7 @@ This Agent Skill helps a user:
 - validate structure, privacy markers, safe areas, motion reduction, and deprecated brand values;
 - prepare a local-only or private-network deployment plan.
 
-![Workflow from capability preflight to a validated landscape PWA](assets/intro/watchtower-workflow-en.png)
+![Workflow from capability preflight to a validated landscape PWA](assets/intro/ai-monitor-workflow-en.png)
 
 ## Quick Start
 
@@ -34,21 +36,21 @@ The first goal is not live-provider access. It is a reversible demo-data success
 ### 1. Generate into a new or empty directory
 
 ```bash
-python3 skills/lucas-deepwheel-ai-watchtower/scripts/create_watchtower.py \
-  --output ./watchtower-demo
+python3 skills/lucas-deepwheel-ai-monitor/scripts/create_ai_monitor.py \
+  --output ./ai-monitor-demo
 ```
 
 ### 2. Validate it
 
 ```bash
-python3 skills/lucas-deepwheel-ai-watchtower/scripts/validate_watchtower.py \
-  ./watchtower-demo
+python3 skills/lucas-deepwheel-ai-monitor/scripts/validate_ai_monitor.py \
+  ./ai-monitor-demo
 ```
 
 ### 3. Preview on the same computer
 
 ```bash
-cd watchtower-demo
+cd ai-monitor-demo
 python3 -m http.server 8765 --bind 127.0.0.1
 ```
 
@@ -72,11 +74,11 @@ The starter uses synthetic demo data and neutral provider monograms. It does not
 
 The Home Screen uses the DeepWheel brand mark and the short app name **AI Monitor**. Its plain-language descriptor is “AI coding status screen.”
 
-![DeepWheel AI Monitor Chinese synthetic-data render at iPhone 17 Pro Max landscape size](assets/intro/watchtower-phone-landscape-apple-17promax-final.png)
+![AI Monitor Chinese synthetic-data render at iPhone 17 Pro Max landscape size](assets/intro/ai-monitor-phone-landscape-apple-17promax-final.png)
 
 The same responsive implementation is also rendered at the iPhone X physical 3× class:
 
-![DeepWheel AI Monitor English synthetic-data render using the same responsive implementation at iPhone X size](assets/intro/watchtower-phone-landscape-apple-iphonex-final.png)
+![AI Monitor English synthetic-data render using the same responsive implementation at iPhone X size](assets/intro/ai-monitor-phone-landscape-apple-iphonex-final.png)
 
 ## Capability boundary
 
@@ -124,6 +126,10 @@ python3 scripts/install-local.py --destination /path/to/skills
 ```
 
 The default is a dry run. Any `--apply` action requires explicit user confirmation.
+
+## Troubleshooting
+
+Use the [First Run recovery table](docs/FIRST-RUN.md#60-second-recovery) for phone access, Safari full-screen mode, safe-area overlap, bottom gaps, sleep recovery, and stopping local sharing.
 
 ## Validation
 

@@ -1,5 +1,22 @@
 # Test Runs
 
+## 2026-07-13 · AI Monitor naming correction
+
+Scope: standardize the public product, repository and technical identifiers as **AI Monitor**, while retaining **DeepWheel** as the brand and official app-icon identity.
+
+Local result: **PASS**.
+
+- package, version and Skill validators: PASS for `0.1.0-rc.3`;
+- unit tests: 9/9 PASS;
+- fresh generated starter: CLEAN;
+- bilingual device matrix: PASS at 100% and simulated 200% text scale, covering 132 scenarios from iPhone X through 17 Pro Max classes;
+- Quality Gate `0.1.0-rc.8`: CLEAN under the public audience and `lucas-deepwheel-` naming rule;
+- relative Markdown links: PASS;
+- renamed PNG and icon bytes: unchanged from the owner-approved visual baseline;
+- superseded public text and filenames: none found.
+
+GitHub Actions for the exact merged commit remains a post-push verification item and is not claimed by the local run.
+
 ## 2026-07-13 · viewport and first-run hardening
 
 Status: local code, layout and bilingual public-surface checks pass; Lucas accepted the v4 public starter on an iPhone 17 Pro Max. Publication approval remains open.
@@ -34,8 +51,8 @@ Executed commands:
 ```bash
 python3 scripts/validate-package.py
 python3 -m unittest discover -s tests -p 'test_*.py' -v
-python3 skills/lucas-deepwheel-ai-watchtower/scripts/create_watchtower.py --output <empty-temp-dir>
-python3 skills/lucas-deepwheel-ai-watchtower/scripts/validate_watchtower.py <temp-dir>
+python3 skills/lucas-deepwheel-ai-monitor/scripts/create_ai_monitor.py --output <empty-temp-dir>
+python3 skills/lucas-deepwheel-ai-monitor/scripts/validate_ai_monitor.py <temp-dir>
 ```
 
 Results:

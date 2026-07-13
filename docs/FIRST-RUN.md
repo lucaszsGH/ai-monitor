@@ -11,8 +11,8 @@ You need Python 3.10+, Safari, an iPhone X through iPhone 17 Pro Max, and a comp
 From the repository root:
 
 ```bash
-python3 skills/lucas-deepwheel-ai-watchtower/scripts/create_watchtower.py \
-  --output ./watchtower-demo
+python3 skills/lucas-deepwheel-ai-monitor/scripts/create_ai_monitor.py \
+  --output ./ai-monitor-demo
 ```
 
 Expect `CREATED` and `MODE: demo data only`. The generator refuses to overwrite a non-empty directory.
@@ -20,8 +20,8 @@ Expect `CREATED` and `MODE: demo data only`. The generator refuses to overwrite 
 ## 2. Validate before opening it
 
 ```bash
-python3 skills/lucas-deepwheel-ai-watchtower/scripts/validate_watchtower.py \
-  ./watchtower-demo
+python3 skills/lucas-deepwheel-ai-monitor/scripts/validate_ai_monitor.py \
+  ./ai-monitor-demo
 ```
 
 Expected result: `CLEAN`.
@@ -29,7 +29,7 @@ Expected result: `CLEAN`.
 ## 3. Preview on the computer first
 
 ```bash
-cd watchtower-demo
+cd ai-monitor-demo
 python3 -m http.server 8765 --bind 127.0.0.1
 ```
 

@@ -11,7 +11,7 @@
 Copy only the Skill package into a supported local Skills directory after reviewing it:
 
 ```text
-skills/lucas-deepwheel-ai-watchtower/
+skills/lucas-deepwheel-ai-monitor/
 ```
 
 The exact destination depends on the host application. Do not overwrite an existing installed copy without a backup and explicit confirmation.

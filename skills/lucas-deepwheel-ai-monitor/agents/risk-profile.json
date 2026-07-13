@@ -1,5 +1,7 @@
 {
   "schema_version": 1,
+  "skill_type": "tool",
+  "audience": "public",
   "risk_level": "medium",
   "domains": [
     "developer_tools",

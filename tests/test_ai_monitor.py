@@ -9,15 +9,15 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILL = ROOT / "skills" / "lucas-deepwheel-ai-watchtower"
-CREATE = SKILL / "scripts" / "create_watchtower.py"
-VALIDATE = SKILL / "scripts" / "validate_watchtower.py"
+SKILL = ROOT / "skills" / "lucas-deepwheel-ai-monitor"
+CREATE = SKILL / "scripts" / "create_ai_monitor.py"
+VALIDATE = SKILL / "scripts" / "validate_ai_monitor.py"
 
 
-class WatchtowerTests(unittest.TestCase):
+class AiMonitorTests(unittest.TestCase):
     def test_clean_starter_generates_and_validates(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
-            output = Path(temp) / "watchtower"
+            output = Path(temp) / "ai-monitor"
             created = subprocess.run(
                 ["python3", str(CREATE), "--output", str(output)],
                 text=True,
@@ -36,7 +36,7 @@ class WatchtowerTests(unittest.TestCase):
 
     def test_generator_refuses_nonempty_output(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
-            output = Path(temp) / "watchtower"
+            output = Path(temp) / "ai-monitor"
             output.mkdir()
             (output / "keep.txt").write_text("do not replace", encoding="utf-8")
             result = subprocess.run(
@@ -50,7 +50,7 @@ class WatchtowerTests(unittest.TestCase):
 
     def test_deprecated_color_returns_concerns(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
-            output = Path(temp) / "watchtower"
+            output = Path(temp) / "ai-monitor"
             shutil.copytree(SKILL / "assets" / "starter", output)
             with (output / "styles.css").open("a", encoding="utf-8") as handle:
                 handle.write("\n.bad { color: #1D1D1F; }\n")
@@ -65,7 +65,7 @@ class WatchtowerTests(unittest.TestCase):
 
     def test_machine_path_returns_concerns_without_echoing_value(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
-            output = Path(temp) / "watchtower"
+            output = Path(temp) / "ai-monitor"
             shutil.copytree(SKILL / "assets" / "starter", output)
             private_value = "/" + "Users" + "/example/private/project"
             (output / "status.example.json").write_text(
@@ -83,7 +83,7 @@ class WatchtowerTests(unittest.TestCase):
 
     def test_session_cannot_contain_provider_usage(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
-            output = Path(temp) / "watchtower"
+            output = Path(temp) / "ai-monitor"
             shutil.copytree(SKILL / "assets" / "starter", output)
             status_path = output / "status.example.json"
             status = json.loads(status_path.read_text(encoding="utf-8"))
@@ -121,14 +121,14 @@ class WatchtowerTests(unittest.TestCase):
         starter = SKILL / "assets" / "starter"
         app = (starter / "app.js").read_text(encoding="utf-8")
         html = (starter / "index.html").read_text(encoding="utf-8")
-        icon = (starter / "icons" / "watchtower-icon.svg").read_text(encoding="utf-8")
+        icon = (starter / "icons" / "ai-monitor-icon.svg").read_text(encoding="utf-8")
         manifest = json.loads((starter / "manifest.webmanifest").read_text(encoding="utf-8"))
         self.assertIn('const language =', app)
         self.assertIn('class="language-switch"', app)
         self.assertIn('switchLanguage', app)
         self.assertIn('DeepWheel', icon)
         self.assertIn('#0071E3', icon)
-        self.assertEqual(manifest["name"], "DeepWheel AI Monitor")
+        self.assertEqual(manifest["name"], "AI Monitor")
         self.assertEqual(manifest["short_name"], "AI Monitor")
         self.assertIn('apple-mobile-web-app-title" content="AI Monitor"', html)
 

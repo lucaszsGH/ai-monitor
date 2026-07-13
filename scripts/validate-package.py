@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILL = ROOT / "skills" / "lucas-deepwheel-ai-watchtower"
+SKILL = ROOT / "skills" / "lucas-deepwheel-ai-monitor"
 
 REQUIRED = [
     "README.md",
@@ -30,11 +30,11 @@ REQUIRED = [
     "examples/example-prompts.md",
     ".github/workflows/validate.yml",
     ".github/PULL_REQUEST_TEMPLATE.md",
-    "skills/lucas-deepwheel-ai-watchtower/SKILL.md",
-    "skills/lucas-deepwheel-ai-watchtower/agents/openai.yaml",
-    "skills/lucas-deepwheel-ai-watchtower/agents/risk-profile.json",
-    "skills/lucas-deepwheel-ai-watchtower/scripts/create_watchtower.py",
-    "skills/lucas-deepwheel-ai-watchtower/scripts/validate_watchtower.py",
+    "skills/lucas-deepwheel-ai-monitor/SKILL.md",
+    "skills/lucas-deepwheel-ai-monitor/agents/openai.yaml",
+    "skills/lucas-deepwheel-ai-monitor/agents/risk-profile.json",
+    "skills/lucas-deepwheel-ai-monitor/scripts/create_ai_monitor.py",
+    "skills/lucas-deepwheel-ai-monitor/scripts/validate_ai_monitor.py",
     "scripts/install-local.py",
     "scripts/validate-version.py",
     "scripts/validate-lucas-deepwheel-skill.py",
@@ -43,16 +43,16 @@ REQUIRED = [
 ]
 
 INTRO_ASSETS = [
-    "assets/intro/watchtower-hero-en.svg",
-    "assets/intro/watchtower-hero-en.png",
-    "assets/intro/watchtower-hero-zh-CN.svg",
-    "assets/intro/watchtower-hero-zh-CN.png",
-    "assets/intro/watchtower-workflow-en.svg",
-    "assets/intro/watchtower-workflow-en.png",
-    "assets/intro/watchtower-workflow-zh-CN.svg",
-    "assets/intro/watchtower-workflow-zh-CN.png",
-    "assets/intro/watchtower-phone-landscape-apple-17promax-final.png",
-    "assets/intro/watchtower-phone-landscape-apple-iphonex-final.png",
+    "assets/intro/ai-monitor-hero-en.svg",
+    "assets/intro/ai-monitor-hero-en.png",
+    "assets/intro/ai-monitor-hero-zh-CN.svg",
+    "assets/intro/ai-monitor-hero-zh-CN.png",
+    "assets/intro/ai-monitor-workflow-en.svg",
+    "assets/intro/ai-monitor-workflow-en.png",
+    "assets/intro/ai-monitor-workflow-zh-CN.svg",
+    "assets/intro/ai-monitor-workflow-zh-CN.png",
+    "assets/intro/ai-monitor-phone-landscape-apple-17promax-final.png",
+    "assets/intro/ai-monitor-phone-landscape-apple-iphonex-final.png",
 ]
 
 SENSITIVE_ASSIGNMENT = re.compile(

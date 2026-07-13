@@ -1,10 +1,12 @@
-# DeepWheel AI Monitor｜AI 编程状态副屏
+# AI Monitor｜AI 编程状态副屏
 
 [English](README.md) | **简体中文**
 
-状态：GitHub 公开发布候选；当前版本 0.1.0-rc.2；尚未打 GitHub Release 标签。
+状态：GitHub 公开发布候选；当前版本 0.1.0-rc.3；尚未打 GitHub Release 标签。
 
-![DeepWheel AI Monitor 把横屏手机变成 Claude 与 Codex 的克制状态副屏](assets/intro/watchtower-hero-zh-CN.png)
+**AI Monitor** 是产品名，**DeepWheel** 是品牌与应用图标识别。
+
+![AI Monitor 把横屏手机变成 Claude 与 Codex 的克制状态副屏](assets/intro/ai-monitor-hero-zh-CN.png)
 
 ## 一句话价值
 
@@ -25,7 +27,7 @@
 - 检查结构、隐私标记、安全区、减少动效和品牌废值；
 - 规划本机或私人网络部署。
 
-![从能力体检到通过验收的横屏 PWA 工作流](assets/intro/watchtower-workflow-zh-CN.png)
+![从能力体检到通过验收的横屏 PWA 工作流](assets/intro/ai-monitor-workflow-zh-CN.png)
 
 ## 快速开始
 
@@ -34,21 +36,21 @@
 ### 1. 生成到全新或空目录
 
 ```bash
-python3 skills/lucas-deepwheel-ai-watchtower/scripts/create_watchtower.py \
-  --output ./watchtower-demo
+python3 skills/lucas-deepwheel-ai-monitor/scripts/create_ai_monitor.py \
+  --output ./ai-monitor-demo
 ```
 
 ### 2. 运行校验
 
 ```bash
-python3 skills/lucas-deepwheel-ai-watchtower/scripts/validate_watchtower.py \
-  ./watchtower-demo
+python3 skills/lucas-deepwheel-ai-monitor/scripts/validate_ai_monitor.py \
+  ./ai-monitor-demo
 ```
 
 ### 3. 先在当前电脑预览
 
 ```bash
-cd watchtower-demo
+cd ai-monitor-demo
 python3 -m http.server 8765 --bind 127.0.0.1
 ```
 
@@ -74,11 +76,11 @@ starter 只使用中性标记和合成假数据，不读取 Claude、Codex、浏
 
 主屏幕使用 DeepWheel 品牌 Logo，应用短名为 **AI Monitor**；中文说明为“AI 编程状态副屏”。
 
-![DeepWheel AI Monitor 中文合成数据 iPhone 17 Pro Max 横屏样张](assets/intro/watchtower-phone-landscape-apple-17promax-final.png)
+![AI Monitor 中文合成数据 iPhone 17 Pro Max 横屏样张](assets/intro/ai-monitor-phone-landscape-apple-17promax-final.png)
 
 同一套响应式实现也按 iPhone X 物理 3× 级尺寸完成渲染：
 
-![同一响应式实现的 DeepWheel AI Monitor 英文 iPhone X 横屏样张](assets/intro/watchtower-phone-landscape-apple-iphonex-final.png)
+![同一响应式实现的 AI Monitor 英文 iPhone X 横屏样张](assets/intro/ai-monitor-phone-landscape-apple-iphonex-final.png)
 
 ## 能力边界
 
@@ -126,6 +128,10 @@ python3 scripts/install-local.py --destination /path/to/skills
 ```
 
 默认只做 dry run。任何 `--apply` 动作都必须先获得用户明确确认。
+
+## 故障排查
+
+手机访问、Safari 全屏、安全区遮挡、底部留白、休眠恢复和停止局域网共享，统一见[第一次使用的 60 秒故障排查](docs/FIRST-RUN.zh-CN.md#60-秒故障排查)。
 
 ## 校验
 

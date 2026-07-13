@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
-  <title id="title">DeepWheel AI Monitor 中文介绍</title>
+  <title id="title">AI Monitor 中文介绍</title>
   <desc id="desc">以 Lucas 已确认的横屏界面为唯一视觉基线，展示双 Agent 会话与账户用量。</desc>
   <rect width="1600" height="900" fill="#000000"/>
   <circle cx="96" cy="76" r="11" fill="#0071E3"/>
   <text x="126" y="88" fill="#F5F7FA" font-family="Avenir Next, PingFang SC, sans-serif" font-size="30" font-weight="600" letter-spacing="4">DEEPWHEEL</text>
   <text x="94" y="166" fill="#F5F7FA" font-family="Avenir Next, PingFang SC, sans-serif" font-size="62" font-weight="600">AI Monitor</text>
   <text x="98" y="214" fill="#C2C9D2" font-family="Avenir Next, PingFang SC, sans-serif" font-size="27" font-weight="400">一个横屏，掌握多个 AI 会话、待办与账户用量。</text>
-  <image href="watchtower-phone-landscape-apple-17promax-final.png" x="70" y="238" width="1460" height="672" preserveAspectRatio="xMidYMid meet"/>
+  <image href="ai-monitor-phone-landscape-apple-17promax-final.png" x="70" y="238" width="1460" height="672" preserveAspectRatio="xMidYMid meet"/>
 </svg>

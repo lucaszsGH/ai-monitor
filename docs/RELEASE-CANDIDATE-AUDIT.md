@@ -1,10 +1,10 @@
 # Release Candidate Audit
 
 Date: 2026-07-13
-Candidate: `0.1.0-rc.2`
+Candidate: `0.1.0-rc.3`
 Scope: public package only
 
-Product display name: **DeepWheel AI Monitor**. Home Screen short name: **AI Monitor**. The technical Skill identifier remains stable for compatibility.
+Product name: **AI Monitor**. Brand and app-icon identity: **DeepWheel**. Technical Skill identifier: `lucas-deepwheel-ai-monitor`.
 
 ## Requirement evidence
 
@@ -30,9 +30,9 @@ These are not package defects, but remain outside local proof:
 
 - Public neutral-starter rotation, Home Screen relaunch and long-running-display checks not explicitly covered by the v4 owner acceptance.
 - Representative older-device real-hardware check; iPhone X coverage is currently simulated.
-- Public repository visibility is now live on GitHub.
+- Public repository visibility is live at `lucaszsGH/ai-monitor`.
 - Owner approval for installation, Tag or Release.
-- A Claude second-view review that returns usable review content.
+- A fresh Claude second-view review for the corrected AI Monitor naming. The earlier review remains historical evidence only.
 
 ## Release decision
 

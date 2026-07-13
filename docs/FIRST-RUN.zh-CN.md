@@ -18,8 +18,8 @@
 在仓库根目录运行：
 
 ```bash
-python3 skills/lucas-deepwheel-ai-watchtower/scripts/create_watchtower.py \
-  --output ./watchtower-demo
+python3 skills/lucas-deepwheel-ai-monitor/scripts/create_ai_monitor.py \
+  --output ./ai-monitor-demo
 ```
 
 预期看到 `CREATED` 和 `MODE: demo data only`。如果目标目录非空，生成器会停止，不会覆盖原文件。
@@ -27,8 +27,8 @@ python3 skills/lucas-deepwheel-ai-watchtower/scripts/create_watchtower.py \
 ## 第 2 步：先在电脑上校验
 
 ```bash
-python3 skills/lucas-deepwheel-ai-watchtower/scripts/validate_watchtower.py \
-  ./watchtower-demo
+python3 skills/lucas-deepwheel-ai-monitor/scripts/validate_ai_monitor.py \
+  ./ai-monitor-demo
 ```
 
 预期结果：`CLEAN`。
@@ -36,7 +36,7 @@ python3 skills/lucas-deepwheel-ai-watchtower/scripts/validate_watchtower.py \
 ## 第 3 步：先完成电脑端预览
 
 ```bash
-cd watchtower-demo
+cd ai-monitor-demo
 python3 -m http.server 8765 --bind 127.0.0.1
 ```
 

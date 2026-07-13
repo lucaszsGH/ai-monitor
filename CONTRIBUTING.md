@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for helping improve DeepWheel AI Monitor.
+Thank you for helping improve AI Monitor.
 
 ## Before opening a pull request
 

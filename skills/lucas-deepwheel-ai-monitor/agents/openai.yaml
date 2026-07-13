@@ -1,5 +1,5 @@
 interface:
-  display_name: "DeepWheel AI Monitor"
+  display_name: "AI Monitor"
   short_description: "把手机横屏变成 Claude 与 Codex 的安全状态副屏"
   default_prompt: "请先做能力体检，再用假数据生成 DeepWheel 横屏 AI 状态屏；不要读取凭证、聊天全文或完整日志。"
 

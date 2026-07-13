@@ -1,8 +1,14 @@
 # Review Record
 
-## 2026-07-13 follow-up
+## 2026-07-13 AI Monitor naming correction
 
-The confirmed product display name is **DeepWheel AI Monitor** and the Home Screen short name is **AI Monitor**. The official DeepWheel mark replaces the temporary `W` lettermark. Chinese and English share one app, follow the system language by default, and expose a compact stateless `EN／中` control.
+Lucas confirmed that **AI Monitor** is the product name and **DeepWheel** is the brand and app-icon identity. The former repository, Skill ID, commands and public asset filenames were corrected before the first tagged release. The new public target is `lucaszsGH/ai-monitor`; Tag and GitHub Release remain separately gated.
+
+The earlier Claude naming review is now historical because it reviewed the superseded compatibility decision. A fresh Claude second view is pending before a tagged Release. Codex therefore treats this change as owner-authorized and machine-verified, not Claude-approved.
+
+## 2026-07-13 follow-up (superseded naming scope)
+
+The confirmed product display name is **AI Monitor** and the Home Screen short name is **AI Monitor**. The official DeepWheel mark replaces the temporary `W` lettermark. Chinese and English share one app, follow the system language by default, and expose a compact stateless `EN／中` control.
 
 | Review | Status | Evidence |
 |---|---|---|
@@ -15,7 +21,7 @@ The confirmed product display name is **DeepWheel AI Monitor** and the Home Scre
 | Claude second view | Passed with concerns accepted | No P0; the earlier real-device P1 is now resolved by the v4 owner pass, and the public review inventory was expanded per P2 |
 | Naming second view | Passed after repair | Claude found the Apple Home Screen meta name still said `DeepWheel`; it now matches `AI Monitor` and is protected by validator and unit-test assertions |
 | Owner visual baseline | Passed on iPhone 17 Pro Max | Lucas accepted v4 after the public starter was restored to the approved private typography, semantic quota colours, usage structure and NOW optical centering |
-| Public release | Pending | No commit, push, Tag or Release is authorized |
+| Public repository | Live | Public GitHub repository exists; Tag and GitHub Release remain pending |
 
 The current product judgment is to keep the candidate demo-first. Live adapters, background services and private networking remain separate opt-in layers rather than part of first run. The revised public workflow makes the safe order explicit: synthetic demo, local validation, desktop preview, separately confirmed trusted-LAN sharing, iPhone check, then optional read-only data work. The accepted private visual baseline is now a regression-locked public contract rather than a direction for further redesign.
 

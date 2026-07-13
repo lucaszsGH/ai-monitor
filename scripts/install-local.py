@@ -9,11 +9,11 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "skills" / "lucas-deepwheel-ai-watchtower"
+SOURCE = ROOT / "skills" / "lucas-deepwheel-ai-monitor"
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Install the DeepWheel AI Monitor Skill locally.")
+    parser = argparse.ArgumentParser(description="Install the AI Monitor Skill locally.")
     parser.add_argument("--destination", required=True, help="Parent Skills directory")
     parser.add_argument("--apply", action="store_true", help="Copy after explicit review")
     args = parser.parse_args()

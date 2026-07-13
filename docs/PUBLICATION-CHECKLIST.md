@@ -12,15 +12,16 @@
 - [x] Accessibility static review is recorded.
 - [x] Public/private separation scan is clean.
 - [x] Real iPhone landscape smoke test is explicitly marked as a release limitation.
-- [x] Intended GitHub target is recorded as `lucaszsGH/lucas-deepwheel-ai-watchtower`; no remote repository has been created.
+- [x] GitHub target is `lucaszsGH/ai-monitor`; repository visibility is public.
 
 ## Release activation gates
 
-These external actions are intentionally **PENDING** and are not implied by candidate-level Quality Gate approval:
+These external actions are tracked separately and are not implied by candidate-level Quality Gate approval:
 
 | Gate | State |
 |---|---|
-| Real iPhone 17 Pro Max landscape smoke test | PENDING |
-| Re-run Claude second-view review in a session that returns content | PENDING |
-| Create the public GitHub repository and confirm visibility | PENDING |
-| Lucas explicitly approves push and public release | PENDING |
+| Real iPhone 17 Pro Max landscape visual acceptance | PASSED |
+| Fresh Claude second-view review for the corrected product name | PENDING |
+| Public GitHub repository and visibility | PASSED |
+| Lucas approval for repository rename and push | PASSED |
+| Lucas approval for Tag or GitHub Release | PENDING |

@@ -1,12 +1,14 @@
 # Claude co-review record
 
+> Naming status: Lucas corrected the product name to **AI Monitor** on 2026-07-13. The older naming reviews below are retained as historical evidence, but they do not approve the new repository and technical Skill names. A fresh second-view review is required before a tagged Release.
+
 ## 2026-07-13 naming and bilingual-product review
 
-Scope: the confirmed public display name **DeepWheel AI Monitor**, Home Screen short name **AI Monitor**, official DeepWheel app icon, bilingual switch, and retained technical Skill identifier.
+Historical scope: the former public display naming, Home Screen short name **AI Monitor**, official DeepWheel app icon, bilingual switch, and the then-retained technical Skill identifier.
 
 Claude found no naming, privacy or capability-overclaim concern in the public README, Skill, live-data boundary or visual descriptions. It found one real Home Screen inconsistency before device acceptance: `apple-mobile-web-app-title` still used the brand name rather than the promised short app name. Codex accepted the finding, changed the value to `AI Monitor`, and added validator plus unit-test assertions so the manifest and Apple meta name cannot silently diverge again.
 
-Final second-view recommendation after that repair: proceed to Lucas's real-device acceptance. Internal `watchtower-*` filenames and the technical Skill ID remain unchanged for compatibility and are not treated as user-facing product names.
+Final recommendation at that time: proceed to Lucas's real-device acceptance. Lucas later overrode the compatibility decision and required the repository, technical Skill ID, commands, icon files and public assets to use AI Monitor naming before the first tagged release.
 
 ## 2026-07-13 successful second view
 

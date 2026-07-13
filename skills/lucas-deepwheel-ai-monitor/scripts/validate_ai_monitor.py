@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Static validation for a generated DeepWheel AI Monitor folder."""
+"""Static validation for a generated AI Monitor folder."""
 
 from __future__ import annotations
 
@@ -17,9 +17,9 @@ REQUIRED = {
     "status.example.json",
     "README.md",
     "icons/apple-touch-icon.png",
-    "icons/watchtower-192.png",
-    "icons/watchtower-512.png",
-    "icons/watchtower-icon.svg",
+    "icons/ai-monitor-192.png",
+    "icons/ai-monitor-512.png",
+    "icons/ai-monitor-icon.svg",
 }
 
 DEPRECATED_COLORS = {"#1D1D1F", "#1E6FE8", "#111720", "#F8FAFC"}
@@ -39,7 +39,7 @@ ABSOLUTE_HOME = re.compile(
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Validate an DeepWheel AI Monitor starter.")
+    parser = argparse.ArgumentParser(description="Validate an AI Monitor starter.")
     parser.add_argument("target", help="AI Monitor output directory")
     return parser.parse_args()
 
@@ -86,7 +86,7 @@ def main() -> int:
         "home-screen-viewport": "100lvh" in css,
         "home-screen-detection": "is-standalone" in js,
         "language-switch": "language-switch" in js and "switchLanguage" in js,
-        "deepwheel-app-icon": "DeepWheel" in ((target / "icons" / "watchtower-icon.svg").read_text(encoding="utf-8") if (target / "icons" / "watchtower-icon.svg").is_file() else ""),
+        "deepwheel-app-icon": "DeepWheel" in ((target / "icons" / "ai-monitor-icon.svg").read_text(encoding="utf-8") if (target / "icons" / "ai-monitor-icon.svg").is_file() else ""),
         "home-screen-name": 'apple-mobile-web-app-title" content="AI Monitor"' in html,
         "demo-label": "demo" in html.lower() or "模拟" in html,
         "example-status": "status.example.json" in js,
