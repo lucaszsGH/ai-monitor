@@ -3,7 +3,7 @@
   "skill_name": "lucas-deepwheel-ai-watchtower",
   "capability_change": "user_visible",
   "decision": "UPDATED",
-  "reason": "Lucas accepted the corrected v4 public starter on iPhone 17 Pro Max. The public UI and bilingual hero/device renders now use the approved private visual baseline rather than a separate redesign.",
+  "reason": "Lucas accepted the corrected v4 public starter on iPhone 17 Pro Max. The public UI and bilingual hero/device renders use the approved private visual baseline, and the repository is now public on GitHub as an unreleased candidate.",
   "reviewed_skill_sha256": "bdca7edfbaee060c12c82edd25552506404ca867e57227ddc4b114dc2cf7d7b7",
   "public_files": [
     "README.md",
@@ -37,7 +37,7 @@
     "assets/intro/watchtower-phone-landscape-apple-17promax-final.png",
     "assets/intro/watchtower-phone-landscape-apple-iphonex-final.png"
   ],
-  "public_surface_sha256": "f2c44cc3ccb0bef6c3408d7ae1774766724eb4b733eb0c2212e0927380ca20f3",
+  "public_surface_sha256": "6d08d67660432b3e8b38447f2bc85ba5bd408bcf6e9d0bb84ca9229e4941ba19",
   "updated_assets": [
     "assets/intro/watchtower-hero-en.svg",
     "assets/intro/watchtower-hero-en.png",

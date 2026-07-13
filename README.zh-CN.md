@@ -2,7 +2,7 @@
 
 [English](README.md) | **简体中文**
 
-状态：本地公开发布候选；当前版本 0.1.0-rc.2；尚未公开发布。
+状态：GitHub 公开发布候选；当前版本 0.1.0-rc.2；尚未打 GitHub Release 标签。
 
 ![DeepWheel AI Monitor 把横屏手机变成 Claude 与 Codex 的克制状态副屏](assets/intro/watchtower-hero-zh-CN.png)
 

@@ -2,7 +2,7 @@
 
 **English** | [简体中文](README.zh-CN.md)
 
-Status: local public-release candidate. Current version: 0.1.0-rc.2. Not yet published.
+Status: public GitHub release candidate. Current version: 0.1.0-rc.2. No tagged GitHub Release yet.
 
 ![DeepWheel AI Monitor turns a landscape phone into a calm status screen for Claude and Codex](assets/intro/watchtower-hero-en.png)
 

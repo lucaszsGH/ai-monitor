@@ -30,10 +30,10 @@ These are not package defects, but remain outside local proof:
 
 - Public neutral-starter rotation, Home Screen relaunch and long-running-display checks not explicitly covered by the v4 owner acceptance.
 - Representative older-device real-hardware check; iPhone X coverage is currently simulated.
-- GitHub repository creation and public visibility.
-- Owner approval for commit, push, installation, Tag or Release.
+- Public repository visibility is now live on GitHub.
+- Owner approval for installation, Tag or Release.
 - A Claude second-view review that returns usable review content.
 
 ## Release decision
 
-The repository remains a **local GitHub release candidate**, not an installed or published release. Code, onboarding, bilingual public surfaces, the simulated device matrix and the iPhone 17 Pro Max visual acceptance pass locally. Publication remains blocked by separately authorized Git/GitHub actions; unchecked rotation, Home Screen relaunch and long-running-display evidence remain documented limitations rather than silently claimed proof.
+The repository is now a **public GitHub release candidate**, not an installed Skill or tagged GitHub Release. Code, onboarding, bilingual public surfaces, the simulated device matrix and the iPhone 17 Pro Max visual acceptance pass locally. Release activation remains blocked by separately authorized installation, Tag or Release actions; unchecked rotation, Home Screen relaunch and long-running-display evidence remain documented limitations rather than silently claimed proof.
