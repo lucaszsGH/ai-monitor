@@ -16,5 +16,5 @@ The public repository and the private runtime have separate responsibilities. A 
 - [x] The install guide and first-run page label the community action as `GitHub · Star`.
 - [x] SHA-256 and release notes were generated from the exact Build 21 DMG.
 - [x] Lucas accepted the exact Build 21 local installation result.
-- [ ] Lucas has separately approved the Git commit/push.
-- [ ] Lucas has separately approved the `app-v1.0.0` tag, GitHub Release, and DMG upload.
+- [x] Lucas has separately approved the Git commit/push.
+- [x] Lucas has separately approved the `app-v1.0.0` tag, GitHub Release, and DMG upload.
