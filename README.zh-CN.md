@@ -2,17 +2,47 @@
 
 [English](README.md) | **简体中文**
 
-状态：GitHub 公开预发布；当前版本 0.1.0-rc.3；标签为 `v0.1.0-rc.3`，尚不是稳定版。
+状态：GitHub 公开社区预览版 `v0.1.0-rc.3`。稳定版 macOS App 独立准备，只有通过最终发布审计后才会出现在 [Releases](https://github.com/lucaszsGH/ai-monitor/releases)。
 
 **AI Monitor** 是产品名，**DeepWheel** 是品牌与应用图标识别。
 
 ![AI Monitor 把横屏手机变成 Claude 与 Codex 的克制状态副屏](assets/intro/ai-monitor-hero-zh-CN.png)
 
-## 一句话价值
+## 把 iPhone 变成 Claude + Codex 的常亮副屏
 
-把横屏手机变成 Claude、Codex 和相邻 AI Agent 的安全状态副屏，同时避免镜像完整聊天或暴露凭证。
+把 iPhone 横放在 Mac 旁并保持充电。AI Monitor 会持续显示哪些 Claude／Codex 本机会话正在等你、订阅额度还剩多少、最近主要用了什么模型，不用反复切窗口。
 
-## 它能做什么
+- **不漏处理：** 等待、执行、待验收等状态持续可见；
+- **看清订阅消耗：** 剩余额度与近期用量一眼可查；
+- **不读取正文：** 状态在 Mac 本机处理，AI Monitor 不读取对话正文。
+
+支持 Claude 单开、Codex 单开和双开。首个稳定版面向 macOS 14 及以上 Apple 芯片 Mac，以及 iPhone X 至 iPhone 17 Pro Max 横屏。
+
+## 下载与首次使用
+
+稳定版安装包发布后：
+
+1. 从 [Releases](https://github.com/lucaszsGH/ai-monitor/releases) 下载 Apple 芯片 DMG；
+2. 启动前先打开安装包里的 **1 · 安装指南 · GUIDE**；
+3. 选择 Claude、Codex 或双开；
+4. 让 iPhone 与 Mac 连接同一可信 Wi‑Fi，再打开本机私密链接；
+5. Safari 点“分享 → 添加到主屏幕”，然后横屏使用。
+
+当前 App 尚未经过 Apple 公证，macOS 可能要求你在“系统设置 → 隐私与安全性”中完成一次“仍要打开”。安装包自带图文指引，不需要关闭 Mac 安全保护，也不需要运行终端命令。
+
+> 私密链接仅允许同一局域网内持有链接的设备访问。只有确实希望他人查看摘要时才分享。
+
+完整说明见[安装包与隐私边界](docs/APP-DOWNLOAD.zh-CN.md)。
+
+## 社区与源码边界
+
+本仓库是公开共建层：包含文档、AI Monitor Skill、界面合同、合成 Demo、校验器和适配器示例，欢迎通过 Issue 与 PR 一起完善。
+
+可下载的 macOS App 包含私有本机运行核心。把安装包放到本仓库下载，不代表私有核心开源。详见[许可范围](LICENSE-SCOPE.md)与[商标声明](TRADEMARKS.md)。
+
+## 面向开发者：公开 Skill 与 Demo
+
+### 它能做什么
 
 这个 Agent Skill 帮助用户：
 
@@ -29,7 +59,7 @@
 
 ![从能力体检到通过验收的横屏 PWA 工作流](assets/intro/ai-monitor-workflow-zh-CN.png)
 
-## 快速开始
+### 快速开始
 
 首次目标不是接入真实账号，而是在 10 分钟内完成一次可回退的假数据横屏验证。完整图文步骤见 [第一次使用](docs/FIRST-RUN.zh-CN.md)。
 
@@ -148,6 +178,8 @@ python3 scripts/device-matrix-smoke.py --font-scale 200
 
 真机验收与发布动作边界见 [docs/OWNER-ACCEPTANCE.md](docs/OWNER-ACCEPTANCE.md)。
 
+macOS 1.0.0 二进制候选另有独立的[发布审计](docs/RELEASE-AUDIT-v1.0.0.md)与[发布清单](docs/RELEASE-CHECKLIST.md)。
+
 ## 安全
 
 见 [SECURITY.md](SECURITY.md)。不得公开凭证、会话材料、私密客户资料、聊天全文、完整敏感日志或机器专属私人覆盖层。
@@ -158,4 +190,4 @@ python3 scripts/device-matrix-smoke.py --font-scale 200
 
 ## License
 
-MIT License，见 [LICENSE](LICENSE)。
+公开仓库材料如无单独说明，采用 MIT License。可下载 App 安装包适用独立二进制许可，见 [LICENSE-SCOPE.md](LICENSE-SCOPE.md)。

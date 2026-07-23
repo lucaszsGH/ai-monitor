@@ -2,17 +2,47 @@
 
 **English** | [简体中文](README.zh-CN.md)
 
-Status: public GitHub pre-release. Current version: 0.1.0-rc.3. Tagged as `v0.1.0-rc.3`; this is not yet a stable release.
+Status: public community preview `v0.1.0-rc.3`. The stable macOS App is prepared separately and will appear in [Releases](https://github.com/lucaszsGH/ai-monitor/releases) only after its final release review.
 
 **AI Monitor** is the product name. **DeepWheel** is the brand and the app-icon identity.
 
 ![AI Monitor turns a landscape phone into a calm status screen for Claude and Codex](assets/intro/ai-monitor-hero-en.png)
 
-## One-line value
+## Turn an iPhone into a Claude + Codex side screen
 
-Turn a landscape phone into a privacy-first status screen for Claude, Codex, and adjacent AI agents—without mirroring full conversations or exposing credentials.
+Place an iPhone in landscape beside your Mac and keep it charging. AI Monitor shows which local Claude or Codex sessions need you, how much subscription quota remains, and which models you used—without repeatedly switching windows.
 
-## What it does
+- **See what needs you:** waiting, running, and review states stay visible.
+- **Understand subscription use:** check remaining limits and recent usage at a glance.
+- **Keep conversations private:** processing stays on the Mac; AI Monitor never reads chat content.
+
+AI Monitor supports Claude-only, Codex-only, and dual-tool views. The first stable build targets Apple Silicon Macs running macOS 14 or later, plus iPhone X through iPhone 17 Pro Max in landscape.
+
+## Download and first use
+
+When the stable binary is published:
+
+1. Download the Apple Silicon DMG from [Releases](https://github.com/lucaszsGH/ai-monitor/releases).
+2. Open the bundled **1 · Installation Guide · GUIDE** before launching the App.
+3. Choose Claude, Codex, or both.
+4. Open the private LAN link on an iPhone using the same trusted Wi‑Fi.
+5. In Safari, choose **Share → Add to Home Screen**, then use landscape.
+
+The App is not Apple-notarized yet. macOS may require one **Open Anyway** approval in **System Settings → Privacy & Security**. The visual guide walks through that approval without disabling Mac security or running Terminal commands.
+
+> A private LAN link is accessible only to devices on the same network that possess it. Share the link only when you intend someone else to view the summary.
+
+See [App download and privacy boundary](docs/APP-DOWNLOAD.md).
+
+## Community and source boundary
+
+This repository is the public collaboration layer: documentation, the AI Monitor Skill, interface contracts, synthetic demos, validators, and adapter examples. Contributions through Issues and pull requests are welcome.
+
+The distributed macOS App contains a private local runtime. Attaching a binary to this repository does **not** make that private runtime open source. See [license scope](LICENSE-SCOPE.md) and [trademark notice](TRADEMARKS.md).
+
+## For developers: public Skill and demo
+
+### What it does
 
 This Agent Skill helps a user:
 
@@ -29,7 +59,7 @@ This Agent Skill helps a user:
 
 ![Workflow from capability preflight to a validated landscape PWA](assets/intro/ai-monitor-workflow-en.png)
 
-## Quick Start
+### Quick Start
 
 The first goal is not live-provider access. It is a reversible demo-data success in about ten minutes. See the complete walkthrough in [First Run](docs/FIRST-RUN.md).
 
@@ -146,6 +176,8 @@ The current requirement-by-requirement evidence is recorded in [docs/RELEASE-CAN
 
 Real-device and release actions are separated in [docs/OWNER-ACCEPTANCE.md](docs/OWNER-ACCEPTANCE.md).
 
+The macOS 1.0.0 binary candidate has a separate [release audit](docs/RELEASE-AUDIT-v1.0.0.md) and [release checklist](docs/RELEASE-CHECKLIST.md).
+
 ## Security
 
 Read [SECURITY.md](SECURITY.md). Never publish credentials, session material, private customer data, full transcripts, complete sensitive logs, or machine-specific private overlays.
@@ -156,4 +188,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). Changes to generators or validators requ
 
 ## License
 
-MIT License. See [LICENSE](LICENSE).
+Public repository materials are MIT-licensed unless a file says otherwise. The downloadable App binary uses a separate binary license. See [LICENSE-SCOPE.md](LICENSE-SCOPE.md).
