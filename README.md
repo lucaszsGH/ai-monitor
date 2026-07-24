@@ -1,167 +1,162 @@
-# AI Monitor
+# AI Monitor｜Turn your iPhone into a Claude + Codex status screen
 
 **English** | [简体中文](README.zh-CN.md)
 
-Status: public community preview `v0.1.0-rc.3`. The stable macOS App is prepared separately and will appear in [Releases](https://github.com/lucaszsGH/ai-monitor/releases) only after its final release review.
+Place an iPhone in landscape beside your Mac and keep it charging. See when Claude or Codex needs you, how much subscription capacity remains, and which models you have been using—without reopening every AI window.
 
-**AI Monitor** is the product name. **DeepWheel** is the brand and the app-icon identity.
+Run **Claude, Codex, or both**. Status is processed locally on your Mac, and **chat content is never read**.
 
-![AI Monitor turns a landscape phone into a calm status screen for Claude and Codex](assets/intro/ai-monitor-hero-en.png)
+**[Download for macOS](https://github.com/lucaszsGH/ai-monitor/releases/latest)** · **[View the install guide](docs/APP-DOWNLOAD.md)** · **[Report an issue](https://github.com/lucaszsGH/ai-monitor/issues)**
 
-## Turn an iPhone into a Claude + Codex side screen
+![AI Monitor dual-tool NOW view showing Claude and Codex sessions that need attention](assets/showcase/01-dual-now-en.png)
 
-Place an iPhone in landscape beside your Mac and keep it charging. AI Monitor shows which local Claude or Codex sessions need you, how much subscription quota remains, and which models you used—without repeatedly switching windows.
+## Why it exists
 
-- **See what needs you:** waiting, running, and review states stay visible.
-- **Understand subscription use:** check remaining limits and recent usage at a glance.
-- **Keep conversations private:** processing stays on the Mac; AI Monitor never reads chat content.
+When Claude and Codex are working at the same time, the hard part is not opening another window. It is knowing:
 
-AI Monitor supports Claude-only, Codex-only, and dual-tool views. The first stable build targets Apple Silicon Macs running macOS 14 or later, plus iPhone X through iPhone 17 Pro Max in landscape.
+- which session has finished and is waiting for you;
+- when a subscription limit is getting close;
+- where recent usage went;
+- whether a powerful model was used where a lighter one may have been enough.
 
-## Download and first use
+AI Monitor keeps those signals on the iPhone beside your Mac. Keep working. Look over when something actually needs you.
 
-When the stable binary is published:
+## One side screen, four useful signals
 
-1. Download the Apple Silicon DMG from [Releases](https://github.com/lucaszsGH/ai-monitor/releases).
-2. Open the bundled **1 · Installation Guide · GUIDE** before launching the App.
-3. Choose Claude, Codex, or both.
-4. Open the private LAN link on an iPhone using the same trusted Wi‑Fi.
-5. In Safari, choose **Share → Add to Home Screen**, then use landscape.
+### Know when an AI needs you
 
-The App is not Apple-notarized yet. macOS may require one **Open Anyway** approval in **System Settings → Privacy & Security**. The visual guide walks through that approval without disabling Mac security or running Terminal commands.
+NOW summarizes sessions that need attention and sessions still running. A restrained warm-orange signal draws the eye without adding another notification pop-up.
 
-> A private LAN link is accessible only to devices on the same network that possess it. Share the link only when you intend someone else to view the summary.
+### One tool still gets the full screen
 
-See [App download and privacy boundary](docs/APP-DOWNLOAD.md).
+Choose Claude, Codex, or both. Single-tool mode expands the useful content instead of leaving half of a dual-tool screen empty.
 
-## Community and source boundary
+![AI Monitor adaptive single-tool iPhone landscape views for Claude and Codex](assets/showcase/02-single-adaptive-en.png)
 
-This repository is the public collaboration layer: documentation, the AI Monitor Skill, interface contracts, synthetic demos, validators, and adapter examples. Contributions through Issues and pull requests are welcome.
+### See limit pressure before it becomes a limit
 
-The distributed macOS App contains a private local runtime. Attaching a binary to this repository does **not** make that private runtime open source. See [license scope](LICENSE-SCOPE.md) and [trademark notice](TRADEMARKS.md).
+LIM uses one status language for remaining capacity: 70% or more is sufficient, 50%–69% is normal, 30%–49% is low, and below 30% is urgent. Claude and Codex keep their own real reset semantics.
+
+![AI Monitor LIM view showing remaining Claude and Codex capacity and reset times](assets/showcase/03-limits-en.png)
+
+### See where usage went, not just how much
+
+USE shows session-level usage for today and the selected period. MDL shows model mix, attribution coverage, and switching signals. Data that cannot be derived safely stays marked as unavailable or unattributed.
+
+![AI Monitor USE and MDL views showing session usage and model mix](assets/showcase/04-usage-models-en.png)
+
+## Chinese or English. One tool or two.
+
+Choose the language and tools during first setup, then change them from SET at any time. No separate iPhone App is required.
+
+![AI Monitor SET view with Chinese and English plus Claude Codex tool selection](assets/showcase/05-set-privacy-en.png)
+
+## Turn the iPhone into a side screen in three steps
+
+1. Install AI Monitor on an Apple Silicon Mac.
+2. Connect the iPhone to the same trusted Wi-Fi and open the private LAN link.
+3. In Safari, choose **Share → Add to Home Screen**, then use the phone in landscape.
+
+The current build is not Apple-notarized. The DMG includes a visual guide for the one-time **Open Anyway** approval in **System Settings → Privacy & Security**. **You do not need to disable Mac security or run Terminal commands.**
+
+![Three steps from installing AI Monitor on a Mac to adding it to the iPhone Home Screen](assets/showcase/06-install-en.png)
+
+## Privacy boundary
+
+- Status is processed on the Mac.
+- AI Monitor does not read Claude or Codex chat content.
+- Status data is not uploaded to a cloud service.
+- Account credentials are not stored or published.
+- Public screenshots use synthetic demo data.
+
+Only devices on the same network that possess the complete private link can access the status summary. **Sharing the link grants access to that summary.**
+
+> A private LAN link controls access; it is not the same as HTTPS transport encryption or end-to-end encryption. This release does not claim “local encryption.”
+
+## Requirements and download
+
+- Apple Silicon Mac, M1 or later;
+- macOS 14 or later;
+- iPhone X through iPhone 17 Pro Max;
+- Mac and iPhone on the same trusted Wi-Fi;
+- landscape use recommended.
+
+**Current stable release: AI Monitor v1.0.0 · Build 21**
+
+- [Download AI Monitor](https://github.com/lucaszsGH/ai-monitor/releases/latest)
+- [Installation, first approval, and privacy boundary](docs/APP-DOWNLOAD.md)
+- [Verify SHA-256 and read the release notes](https://github.com/lucaszsGH/ai-monitor/releases/tag/app-v1.0.0)
+
+## FAQ
+
+### Do I install an App on the iPhone?
+
+No. Open the private link in Safari, then add AI Monitor to the Home Screen.
+
+### Can I use only Claude or only Codex?
+
+Yes. Choose Claude, Codex, or both during setup or later from SET.
+
+### Does it read my chat content?
+
+No. AI Monitor processes only the minimal status summary needed for the dashboard and does not read chat content.
+
+### Why can macOS block the App the first time?
+
+The current build is not Apple-notarized. The bundled visual guide shows the one-time approval in Privacy & Security. You do not need to disable Gatekeeper or run Terminal commands.
+
+### Can someone else on the same Wi-Fi see it?
+
+Only a device with the complete private link can access the summary. Sharing the link grants access, so share it only when intended.
+
+## If it earns a place beside your Mac, star it
+
+If AI Monitor earns a permanent spot beside your Mac, **star the project** to follow compatibility updates—and help more Claude and Codex users discover it.
+
+**[Star on GitHub](https://github.com/lucaszsGH/ai-monitor)** · **[Report an issue](https://github.com/lucaszsGH/ai-monitor/issues)** · **[Share the public project](https://github.com/lucaszsGH/ai-monitor)**
+
+Suggested share text:
+
+> I turned a spare iPhone into a status screen beside my Mac. It shows when Claude or Codex needs me, how much subscription capacity remains, and which models I have been using—without reopening every AI window.
+
+Sharing the public project never includes your private link, LAN address, real sessions, or usage data.
+
+## Open collaboration and source boundary
+
+Public collaboration package: `v0.1.0-rc.3`. The downloadable App has its own `v1.0.0` release line.
+
+This repository is the public collaboration layer. It contains:
+
+- product and installation documentation;
+- the AI Monitor Skill;
+- public UI and data contracts;
+- synthetic demos, validators, and adapter examples;
+- contribution paths for language, device compatibility, and onboarding.
+
+Issues and [pull requests](CONTRIBUTING.md) are welcome.
+
+The downloadable macOS App contains a private local runtime. MIT-licensed public materials and the separate App binary license have different scopes. Publishing the installer does not open-source the private runtime. See [license scope](LICENSE-SCOPE.md) and [trademark notice](TRADEMARKS.md).
 
 ## For developers: public Skill and demo
 
-### What it does
+The public Skill generates a synthetic-data landscape PWA and helps developers reuse the information architecture, DeepWheel mobile design contract, privacy markers, safe-area handling, and adapter boundaries.
 
-This Agent Skill helps a user:
-
-- separate quota, context-window health, and actual work context;
-- group multiple sessions under each provider without summing their context percentages;
-- switch manually between NOW, SESSIONS, and USAGE instead of auto-rotating;
-- follow the system language by default, with a compact `EN／中` control for one-tap switching;
-- start with a demo-data landscape PWA before connecting real sources;
-- choose a low-risk local data path;
-- apply the DeepWheel mobile landscape design contract;
-- generate a starter without overwriting existing files;
-- validate structure, privacy markers, safe areas, motion reduction, and deprecated brand values;
-- prepare a local-only or private-network deployment plan.
-
-![Workflow from capability preflight to a validated landscape PWA](assets/intro/ai-monitor-workflow-en.png)
-
-### Quick Start
-
-The first goal is not live-provider access. It is a reversible demo-data success in about ten minutes. See the complete walkthrough in [First Run](docs/FIRST-RUN.md).
-
-### 1. Generate into a new or empty directory
+### Generate, validate, and preview
 
 ```bash
 python3 skills/lucas-deepwheel-ai-monitor/scripts/create_ai_monitor.py \
   --output ./ai-monitor-demo
-```
 
-### 2. Validate it
-
-```bash
 python3 skills/lucas-deepwheel-ai-monitor/scripts/validate_ai_monitor.py \
   ./ai-monitor-demo
-```
 
-### 3. Preview on the same computer
-
-```bash
 cd ai-monitor-demo
 python3 -m http.server 8765 --bind 127.0.0.1
 ```
 
-Then open `http://127.0.0.1:8765`.
+See [First Run](docs/FIRST-RUN.md) for the complete walkthrough and [LIVE-DATA](docs/LIVE-DATA.md) plus [ADAPTER-CONTRACT](docs/ADAPTER-CONTRACT.md) for real-data boundaries.
 
-### 4. Confirm trusted-LAN access for the iPhone
-
-Stop the previous server with `Control+C`. After confirming that this is a trusted home or office Wi-Fi with no public port forwarding, run:
-
-```bash
-python3 -m http.server 8765 --bind 0.0.0.0
-```
-
-Open `http://COMPUTER-LAN-IP:8765/?debug=1` on the phone. Do not use `127.0.0.1` on the phone. The local-only diagnostic overlay reports viewport, safe area, overflow, and Home Screen mode; it does not transmit or store the values.
-
-### 5. Full-screen on iPhone
-
-A webpage cannot force Safari chrome to disappear. In Safari, use Share → Add to Home Screen, enable Open as Web App, then launch AI Monitor from its Home Screen icon. The starter includes standalone, landscape, and Apple web-app metadata. Its black base and symmetric safe-area guards visually merge the notch or Dynamic Island into the edge while keeping content outside the obstruction. Browser mode uses `100dvh`; Home Screen mode uses `100lvh` to avoid the large bottom gap observed on iOS landscape.
-
-The starter uses synthetic demo data and neutral provider monograms. It does not read Claude, Codex, browser storage, credentials, transcripts, or project files.
-
-The Home Screen uses the DeepWheel brand mark and the short app name **AI Monitor**. Its plain-language descriptor is “AI coding status screen.”
-
-![AI Monitor Chinese synthetic-data render at iPhone 17 Pro Max landscape size](assets/intro/ai-monitor-phone-landscape-apple-17promax-final.png)
-
-The same responsive implementation is also rendered at the iPhone X physical 3× class:
-
-![AI Monitor English synthetic-data render using the same responsive implementation at iPhone X size](assets/intro/ai-monitor-phone-landscape-apple-iphonex-final.png)
-
-## Capability boundary
-
-### Supported
-
-- Landscape PWA information architecture.
-- DeepWheel public landscape design contract.
-- Demo-data starter generation.
-- Static privacy and structure validation.
-- Local-only and trusted-LAN deployment guidance.
-- Generic Claude/Codex status normalization.
-- Multi-session provider model with strict provider-level usage and session-level context separation.
-
-### Requires tools, permissions, or human review
-
-- Live Claude or Codex quota and context data.
-- Background services, HTTPS, private networking, and push notifications.
-- iPhone device testing for safe areas, text scaling, and long-running display.
-- License and supply-chain review before reusing third-party adapters.
-
-### Not promised
-
-- Credential scraping or login bypasses.
-- Stable access to undocumented provider endpoints.
-- Automatic installation, remote exposure, publishing, push, Tag, or Release.
-- Safe arbitrary remote command execution.
-- Inferring real task completion from token consumption.
-
-## Privacy model
-
-The public package contains no real accounts, local paths, private project names, transcript content, or reusable credentials. It uses a minimal status contract and synthetic fixtures.
-
-Keep personal overlays outside the public repository. See [docs/PRIVATE-OVERLAY.md](docs/PRIVATE-OVERLAY.md).
-
-For safe live-data paths, see [docs/LIVE-DATA.md](docs/LIVE-DATA.md) and [docs/ADAPTER-CONTRACT.md](docs/ADAPTER-CONTRACT.md). The public package never ships provider trademarks or machine-specific adapters by default.
-
-## Installation
-
-Read [docs/INSTALLATION.md](docs/INSTALLATION.md). No installer runs automatically.
-
-Preview a guarded local copy without writing files:
-
-```bash
-python3 scripts/install-local.py --destination /path/to/skills
-```
-
-The default is a dry run. Any `--apply` action requires explicit user confirmation.
-
-## Troubleshooting
-
-Use the [First Run recovery table](docs/FIRST-RUN.md#60-second-recovery) for phone access, Safari full-screen mode, safe-area overlap, bottom gaps, sleep recovery, and stopping local sharing.
-
-## Validation
+### Repository validation
 
 ```bash
 python3 scripts/validate-package.py
@@ -170,22 +165,6 @@ python3 scripts/device-matrix-smoke.py
 python3 scripts/device-matrix-smoke.py --font-scale 200
 ```
 
-See [docs/TEST-RUNS.md](docs/TEST-RUNS.md) and [docs/REVIEW-RECORD.md](docs/REVIEW-RECORD.md).
-
-The current requirement-by-requirement evidence is recorded in [docs/RELEASE-CANDIDATE-AUDIT.md](docs/RELEASE-CANDIDATE-AUDIT.md).
-
-Real-device and release actions are separated in [docs/OWNER-ACCEPTANCE.md](docs/OWNER-ACCEPTANCE.md).
-
-The macOS 1.0.0 binary candidate has a separate [release audit](docs/RELEASE-AUDIT-v1.0.0.md) and [release checklist](docs/RELEASE-CHECKLIST.md).
-
-## Security
-
-Read [SECURITY.md](SECURITY.md). Never publish credentials, session material, private customer data, full transcripts, complete sensitive logs, or machine-specific private overlays.
-
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md). Changes to generators or validators require positive and negative tests.
-
 ## License
 
-Public repository materials are MIT-licensed unless a file says otherwise. The downloadable App binary uses a separate binary license. See [LICENSE-SCOPE.md](LICENSE-SCOPE.md).
+Public repository materials are MIT-licensed unless a file says otherwise. The downloadable App binary uses a separate license. See [LICENSE-SCOPE.md](LICENSE-SCOPE.md).

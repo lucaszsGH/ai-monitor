@@ -7,6 +7,18 @@
 - Optional, audited read-only adapters.
 - Private-network deployment recipe.
 
+## [App 1.0.0] - 2026-07-23
+
+### Added
+
+- Published the Apple Silicon macOS App and its SHA-256 checksum.
+- Added the consumer-first bilingual product walkthrough with formal UI renders for dual-tool, single-tool, limits, usage, models, SET, and installation.
+
+### Clarified
+
+- The downloadable App contains a private local runtime; the public repository remains the MIT-licensed collaboration layer.
+- Private LAN links control access to local summaries and must not be shared unintentionally.
+
 ## [0.1.0-rc.3] - 2026-07-13
 
 ### Release status
